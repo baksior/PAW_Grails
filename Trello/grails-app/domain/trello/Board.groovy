@@ -7,6 +7,11 @@ import grails.rest.Resource
 class Board {
 
 	String name
+	String description
+	String createdDate
+	Integer  userId
+	
+	static hasMany = [cards: Card]
 
     static constraints = {
 	
