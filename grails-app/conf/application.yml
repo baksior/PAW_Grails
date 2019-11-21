@@ -2,17 +2,21 @@
 grails:
     profile: rest-api
     codegen:
-        defaultPackage: myapp
+        defaultPackage: trello
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
             events: false
+    cors:
+        enabled: true
 info:
     app:
         name: '@info.app.name@'
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
+server:
+    port: 8090
 spring:
     jmx:
         unique-names: true
