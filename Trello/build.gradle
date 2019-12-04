@@ -20,6 +20,7 @@ apply plugin:"org.grails.plugins.views-json"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
+	maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
 }
 
 configurations {
@@ -27,6 +28,10 @@ configurations {
     runtimeClasspath {
         extendsFrom developmentOnly
     }
+}
+
+ext{
+    springSecurityRestVersion = '2.0.0.M2'
 }
 
 dependencies {
@@ -63,6 +68,10 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
+    compile "org.grails.plugins:spring-security-core:4.0.0.BUILD-SNAPSHOT"
+    compile "org.grails.plugins:spring-security-rest:${springSecurityRestVersion}"
+    compile "org.grails.plugins:spring-security-rest-gorm:${springSecurityRestVersion}"
+
 }
 
 bootRun {

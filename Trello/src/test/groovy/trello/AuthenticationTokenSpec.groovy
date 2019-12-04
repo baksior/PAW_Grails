@@ -3,7 +3,7 @@ package trello
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class CardAssignmentSpec extends Specification implements DomainUnitTest<CardAssignment> {
+class AuthenticationTokenSpec extends Specification implements DomainUnitTest<AuthenticationToken> {
 
     def setup() {
     }

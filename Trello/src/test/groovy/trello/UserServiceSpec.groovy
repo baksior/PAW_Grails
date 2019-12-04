@@ -1,9 +1,9 @@
 package trello
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class BoardMemberSpec extends Specification implements DomainUnitTest<BoardMember> {
+class UserServiceSpec extends Specification implements ServiceUnitTest<UserService>{
 
     def setup() {
     }

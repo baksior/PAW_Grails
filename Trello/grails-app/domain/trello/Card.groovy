@@ -1,18 +1,18 @@
 package trello
 
-import grails.rest.Resource
-
-@Resource(uri = '/card')
 
 class Card {
 
-	String title
-	String description
-	Integer position
-	String createdDate
-	
-	static belongsTo = [board: Board]
+
+    String description
+    Boolean isArchived = false
+    String attachment
+
+
+    static belongsTo = [column: Column]
+    static hasMany = [comments: Comment]
 
     static constraints = {
+        attachment nullable: true
     }
 }

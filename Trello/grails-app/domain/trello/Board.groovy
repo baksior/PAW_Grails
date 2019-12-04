@@ -1,21 +1,31 @@
 package trello
 
-import grails.rest.Resource
-
-@Resource(uri = '/board')
-
 class Board {
 
-	String name
-	String description
-	String createdDate
-	Integer  userId
-	
-	static hasMany = [cards: Card]
+    String title
+
+    static belongsTo = [user: User]
+
+    static hasMany = [columns: Column]
+
+    static mapping = {
+        columns lazy: false
+        autowire true
+    }
+
 
     static constraints = {
-	
-		name maxSize: 255
-	
+        user nullable: true
+    }
+
+    def userService
+
+    def beforeInsert() {
+
+        User u = userService.getCurrUser()
+        if (u != null) {
+            this.user = u
+        }
+
     }
 }
