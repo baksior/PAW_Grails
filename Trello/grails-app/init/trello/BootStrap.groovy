@@ -11,7 +11,7 @@ class BootStrap {
     def init = { servletContext ->
 
         Board board = new Board(title: "board1")
-        Card card = new Card(description: "card1")
+        Card card = new Card(description: "card1", labels: ["test", "test1"])
         Column column = new Column(title: "column1")
 
         column.addToCards(card)

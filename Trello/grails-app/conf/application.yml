@@ -33,6 +33,8 @@ spring:
 management:
     endpoints:
         enabled-by-default: false
+server:
+    port: 8081
 
 ---
 grails:
@@ -69,7 +71,8 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
-
+    cors:
+        enabled: true
 ---
 hibernate:
     cache:
@@ -88,10 +91,14 @@ environments:
         dataSource:
             dbCreate: create-drop
             url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            properties:
+                web-allow-others: true
     test:
         dataSource:
             dbCreate: update
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            properties:
+                web-allow-others: true
     production:
         dataSource:
             dbCreate: none
@@ -114,3 +121,4 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+                web-allow-others: true
