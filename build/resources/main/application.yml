@@ -8,12 +8,15 @@ grails:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
             events: false
-    cors: true
+    cors:
+        enabled: true
 info:
     app:
-        name: '@info.app.name@'
-        version: '@info.app.version@'
-        grailsVersion: '@info.app.grailsVersion@'
+        name: 'trello'
+        version: '0.1'
+        grailsVersion: '4.0.1'
+server:
+    port: 8090
 spring:
     jmx:
         unique-names: true
