@@ -32,13 +32,7 @@ class UserController extends RestfulController {
                     }
                 }
 
-            render "1"
-        } else {
-
-            render "0"
-
         }
-
     }
 
     @Secured('ROLE_USER')
