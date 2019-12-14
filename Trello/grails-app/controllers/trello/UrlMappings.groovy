@@ -23,6 +23,7 @@ class UrlMappings {
         '/api/user'(resources: 'user') {
             collection {
                 '/boards'(controller: 'user', action: 'getBoards')
+                '/register'(controller: 'user', action: 'register')
             }
         }
 
