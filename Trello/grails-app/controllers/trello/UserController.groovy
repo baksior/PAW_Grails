@@ -19,7 +19,7 @@ class UserController extends RestfulController {
 
         User u = springSecurityService.currentUser as User
 
-        render u.boards
+        render u.boards as JSON
     }
 
     @Secured('permitAll')
