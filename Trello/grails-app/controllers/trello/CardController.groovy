@@ -23,7 +23,7 @@ class CardController extends RestfulController {
 
         def c = Card.get(params.id)
 
-        render c.comments
+        render c.comments as JSON
     }
 
     @Secured('ROLE_USER')
@@ -31,7 +31,7 @@ class CardController extends RestfulController {
 
         def c = Card.get(params.id)
 
-        render c.findAllWhere(isArchived: true)
+        render c.findAllWhere(isArchived: true) as JSON
 
     }
 

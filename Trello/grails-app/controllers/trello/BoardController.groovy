@@ -18,7 +18,10 @@ class BoardController extends RestfulController {
 
         def b = Board.get(params.id)
 
-        render b.columns
+
+            render b.columns as JSON
+
+
     }
 
     @Secured('permitAll')
