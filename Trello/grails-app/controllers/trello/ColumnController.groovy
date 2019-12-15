@@ -13,17 +13,17 @@ class ColumnController extends RestfulController {
     }
 
     @Secured('ROLE_USER')
-    def getCards(Integer id) {
+    def getCards() {
 
-        def c = Column.get(id)
+        def c = Column.get(params.id)
 
         render c.cards.findAllWhere(isArchived: false)
     }
 
     @Secured('ROLE_USER')
-    def getArchivedCards(Integer id) {
+    def getArchivedCards() {
 
-        def c = Column.get(id)
+        def c = Column.get(params.id)
 
         render c.cards.findAllWhere(isArchived: true)
     }

@@ -16,7 +16,7 @@ class UrlMappings {
 
         '/api/board'(resources: 'board') {
             collection {
-                '/columns'(resources: 'board', action: 'getColumns')
+                '/columns'(controller: 'board', action: 'getColumns')
             }
         }
 
