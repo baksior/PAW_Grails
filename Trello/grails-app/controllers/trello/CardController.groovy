@@ -19,9 +19,9 @@ class CardController extends RestfulController {
     }
 
     @Secured('ROLE_USER')
-    def getComments(Integer id) {
+    def getComments() {
 
-        def c = Card.get(id)
+        def c = Card.get(params.id)
 
         render c.comments
     }
@@ -29,7 +29,9 @@ class CardController extends RestfulController {
     @Secured('ROLE_USER')
     def getArchivedCards(){
 
-        render Card.findAllWhere(isArchived: true)
+        def c = Card.get(params.id)
+
+        render c.findAllWhere(isArchived: true)
 
     }
 

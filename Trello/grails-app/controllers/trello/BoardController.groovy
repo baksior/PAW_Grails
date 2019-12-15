@@ -14,9 +14,9 @@ class BoardController extends RestfulController {
     }
 
     @Secured('ROLE_USER')
-    def getColumns(Integer id) {
+    def getColumns() {
 
-        def b = Board.get(id)
+        def b = Board.get(params.id)
 
         render b.columns
     }
