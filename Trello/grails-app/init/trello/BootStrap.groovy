@@ -15,7 +15,11 @@ class BootStrap {
         Column column = new Column(title: "column1")
         Column column2 = new Column(title: "column2")
         Column column3 = new Column(title: "column3")
+
         Comment comment = new Comment(commentContent: "comment1", commentAuthor: "Dawiq")
+
+		Label label1 = new Label(title: "label1")
+		card.addToLabels(label1)
 
         column.addToCards(card)
 

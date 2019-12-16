@@ -10,7 +10,7 @@ class Card {
 
 
     static belongsTo = [column: Column]
-    static hasMany = [comments: Comment]
+    static hasMany = [comments: Comment, labels: Label]
 
     static constraints = {
         attachment nullable: true
