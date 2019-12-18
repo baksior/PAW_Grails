@@ -15,12 +15,14 @@ class BootStrap {
         Column column = new Column(title: "column1")
         Column column2 = new Column(title: "column2")
         Column column3 = new Column(title: "column3")
+        Comment comment = new Comment(text: "comment1")
 
         column.addToCards(card)
 
         board.addToColumns(column)
         board.addToColumns(column2)
 
+        card.addToComments(comment)
 
         def adminRole = new Role('ROLE_ADMIN').save()
         def userRole = new Role('ROLE_USER').save()
