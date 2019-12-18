@@ -3,7 +3,7 @@ package trello
 
 class Card {
 
-
+    String name
     String description
     Boolean isArchived = false
     String attachment

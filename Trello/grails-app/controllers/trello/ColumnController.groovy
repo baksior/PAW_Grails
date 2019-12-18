@@ -18,6 +18,7 @@ class ColumnController extends RestfulController {
         def c = Column.get(params.id)
 
         render c.cards.findAllWhere(isArchived: false) as JSON
+        //       render Card.findAllWhere(isArchived: false) as JSON;
     }
 
     @Secured('ROLE_USER')
