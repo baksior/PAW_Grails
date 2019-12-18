@@ -12,7 +12,7 @@ class Comment {
     String attachment
     String commentAuthor
     String commentContent
-    String commentDate
+    //Date commentDate
 
 
     static belongsTo = [card: Card]
