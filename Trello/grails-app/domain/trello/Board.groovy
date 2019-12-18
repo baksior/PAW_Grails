@@ -3,6 +3,7 @@ package trello
 class Board {
 
     String title
+    String image
 
     static belongsTo = [user: User]
 
