@@ -25,6 +25,14 @@ class CardController extends RestfulController {
 
         render c.comments as JSON
     }
+	
+	@Secured('ROLE_USER')
+    def getLabels() {
+
+        def c = Card.get(params.id)
+
+        render c.labels as JSON
+    }
 
     @Secured('ROLE_USER')
     def getArchivedCards(){

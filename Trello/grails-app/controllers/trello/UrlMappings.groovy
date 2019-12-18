@@ -38,6 +38,7 @@ class UrlMappings {
             collection {
                 '/comments'(controller: 'card', action: 'getComments')
                 '/archived'(controller: 'card', action: 'getArchivedCards')
+				'/labels'(controller: 'card', action: 'getLabels')
             }
         }
 
