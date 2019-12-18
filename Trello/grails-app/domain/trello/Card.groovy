@@ -7,7 +7,7 @@ class Card {
     String description
     Boolean isArchived = false
     String attachment
-    String[] labels
+    
 
 
     static belongsTo = [column: Column]

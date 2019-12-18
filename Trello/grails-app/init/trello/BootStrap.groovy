@@ -13,6 +13,8 @@ class BootStrap {
         Board board = new Board(title: "board1")
         Card card = new Card(description: "card1", labels: ["test", "test1"])
         Column column = new Column(title: "column1")
+        Label label = new Label(title: "label1")
+        //card.addToLabels(label)
 
         column.addToCards(card)
 
