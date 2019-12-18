@@ -9,8 +9,10 @@ import grails.plugin.springsecurity.annotation.Secured
 
 class Comment {
 
-    String text
     String attachment
+    String commentAuthor
+    String commentContent
+    String commentDate
 
 
     static belongsTo = [card: Card]

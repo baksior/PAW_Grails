@@ -4,6 +4,7 @@ class Board {
 
     String title
     String image
+    String state
 
     static belongsTo = [user: User]
 

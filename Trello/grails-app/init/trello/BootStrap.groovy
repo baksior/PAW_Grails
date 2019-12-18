@@ -10,12 +10,12 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        Board board = new Board(title: "board1", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg")
+        Board board = new Board(title: "board1", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg", state: "active")
         Card card = new Card(name: "card1", description: "card1 desc")
         Column column = new Column(title: "column1")
         Column column2 = new Column(title: "column2")
         Column column3 = new Column(title: "column3")
-        Comment comment = new Comment(text: "comment1")
+        Comment comment = new Comment(commentContent: "comment1", commentAuthor: "Dawiq")
 
         column.addToCards(card)
 
@@ -45,7 +45,7 @@ class BootStrap {
 
         userDataService.save(testUser)
 
-        Board board2 = new Board(title: "board2", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg")
+        Board board2 = new Board(title: "board2", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg", state: "active")
 
         board2.addToColumns(column3)
 
@@ -53,7 +53,7 @@ class BootStrap {
 
         userDataService.save(testUser)
 
-        Board board3 = new Board(title: "board3", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg")
+        Board board3 = new Board(title: "board3", image: "http://dawiq.lh.pl/Trellol//images/lolImg.jpg", state: "active")
         adminUser.addToBoards(board3)
         userDataService.save(adminUser)
 
